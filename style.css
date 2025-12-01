@@ -46,7 +46,7 @@ body {
     left: 0;
     width: 100%;
     height: 90%;
-    background-image: url("img/Caixa.png");
+    background-image: url("img/Banner-Prinicpal.png");
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -408,5 +408,6 @@ CARDS MAIS LARGOS + IMAGEM DE FUNDO */
 .seta.direita {
     right: -10px;
 }
+
 
 
