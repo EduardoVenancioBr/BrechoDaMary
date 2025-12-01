@@ -1,0 +1,410 @@
+body {
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    padding: 0px;
+    max-width: none;
+    height: auto;
+}
+
+.cabecalho {
+    background-color: darkseagreen;
+    padding: 20px;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-attachment: fixed;
+    margin-bottom: 0;
+}
+
+/* -------Banner------- */
+.home-fundo {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+    /* 90% da altura da tela. Obg. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+.home-fundo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url("img/Banner-Prinicpal.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    animation: zoom 10s infinite alternate ease-in-out;
+}
+
+.home-fundo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.192);
+    /* camada escura */
+    z-index: 2;
+}
+
+.conteudo-home {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/*-------*/
+
+.conteudo-principal {
+    margin: 0% 30%;
+    background: #f5f5f5;
+    min-height: 80vh;
+}
+
+footer {
+    background-color: darkseagreen;
+    color: whitesmoke;
+    padding: 35px 30%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.conteudo-rodape{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+}
+
+/*-------Textos Especiais-------*/
+.titulo-pagina {
+    font-size: 30px;
+
+}
+
+.descricao-pagina {
+    margin: 0px 0px 0px 15px;
+}
+
+.texto-destaque {
+    border: #BC4343;
+    color: #f72020;
+    padding: 10px;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.texto-box {
+    flex: 0% 0% 65%;
+    /*background: #e4e3dc;*/
+    background: #ececec;
+    padding: 1rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+}
+
+.preco{
+    font-weight: bold;
+    font-size: 20px;
+    color: #f72020;
+    border-radius: 5px;
+    padding: 0px 5px;
+}
+
+/* -------Botões------- */
+.padrao {
+    box-sizing: inherit;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    color: rgb(239, 255, 232);
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .btn {
+        margin: 0 1em 2em;
+    }
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+/* efeito das linhas */
+
+.btn-2 {
+    letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+    letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+    content: '';
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    transition: all 280ms ease-in-out;
+    width: 0;
+    left: -10%;
+    right: -10%;
+}
+
+/* Linha INFERIOR */
+.btn-2:after {
+    bottom: 0px;
+}
+
+/* Linha SUPERIOR */
+.btn-2:before {
+    top: 0px;
+}
+
+/* Estado de HOVER */
+.btn-2:hover:after,
+.btn-2:hover:before {
+    backface-visibility: hidden;
+    border-color: #ffffff;
+    transition: width 350ms ease-in-out;
+    width: 100%;
+}
+
+.btn-3 {
+    color: #ffd700;
+    text-decoration: underline;
+    text-decoration-color: #ffd700;
+}
+
+.btn-3:hover:after,
+.btn-3:hover:before {
+    backface-visibility: hidden;
+    text-decoration-color: #ffd700;
+    border-color: #ffd700;
+    transition: width 350ms ease-in-out;
+    width: 100%;
+}
+
+/*-------Caixa de Imagens-------*/
+.line {
+    display: flex;
+    align-items: normal;
+    /* Alinha pelo topo */
+    gap: 2rem;
+    background: #e4e3dc;
+    padding: 0px 10px;
+    margin: 22px 0px;
+}
+
+.imagem-box {
+    flex: 0% 0% 30%;
+}
+
+.imagem-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1px;
+    background: #fff;
+    margin: 10px 0px;
+}
+
+/* Outra caixa */
+.container-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+/*Caixa de roupas*/
+.caixas{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.container-caixa {
+    display: grid;
+    gap: 10px;
+    padding: 20px 0px;
+    
+}
+.caixa {
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+}
+.caixa img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+/* Efeito 1: Zoom Simples */
+.efeito img:hover {
+    transform: scale(1.1);
+}
+
+/* --- CARROSSEL --- */
+/* LINHA COM TÍTULO E CARROSSEL */
+.linha {
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+/* Oculta scrollbar */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/*-------CARROSEL-------
+CARDS MAIS LARGOS + IMAGEM DE FUNDO */
+.card {
+    /* min-width: 320px; DOBRO DA LARGURA */
+    min-width: 320px; /* DOBRO DA LARGURA */
+    height: 350px;
+    border-radius: 12px;
+    color: #f72020;
+    text-decoration: underline;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card-bolsas {
+    /* min-width: 320px; DOBRO DA LARGURA */
+    min-width: 500px; /* DOBRO DA LARGURA */
+    height: 400px;
+    border-radius: 12px;
+    color: #f72020;
+    text-decoration: underline;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform .3s, box-shadow .3s;
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.7);
+}
+
+.card-bolsas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.7);
+}
+
+/* BOTÕES DE SETA (CARROSSEL) */
+.seta {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: rgba(188,67,67,0.2);
+    border: none;
+    color: white;
+    font-size: 32px;
+    padding: 4px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    transition: background .3s;
+}
+
+.seta:hover {
+    /*background: rgba(255,255,255,0.4);*/
+    background: rgba(188,67,67,0.4);
+}
+
+.seta.esquerda {
+    left: -10px;
+}
+
+.seta.direita {
+    right: -10px;
+}
